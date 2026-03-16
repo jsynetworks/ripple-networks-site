@@ -7,7 +7,7 @@
 title: ''
 baseURL: "https://jsynetworks.github.io/ripple-networks-site/"
 relativeURLs: true
-canonifyURLs: true
+canonifyURLs: false
 
 ############################
 ## PAGE OPTIONS
