@@ -10,9 +10,10 @@ tags:
   - HugoBlox Kit
   - Markdown
 image:
-  caption: 'Embed rich media such as videos and LaTeX math'
+  caption: Embed rich media such as videos and LaTeX math
+status: archived
+draft: true
 ---
-
 [HugoBlox Kit](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the HugoBlox Kit which this template is built upon handles the rest.
 
 **Embed videos, podcasts, code, LaTeX math, and even test students!**

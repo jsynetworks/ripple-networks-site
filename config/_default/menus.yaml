@@ -4,23 +4,33 @@
 
 main:
   - name: Home
+    identifier: 13ac2393
     url: /#top
     weight: 10
-  - name: Features
-    url: /#features
-    weight: 20
   - name: Solutions
+    identifier: "82470786"
     url: /#solutions
+    weight: 20
+  - name: Services
+    identifier: "22290605"
+    url: /#services
     weight: 30
   - name: Changelog
+    identifier: 00c20037
     url: /changelog/
-    weight: 35
-  - name: Resources
     weight: 40
-    hasChildren: true
-  - parent: Resources
-    name: Blog
+  - name: Resources
+    identifier: ca07d657
+    url: ""
+    weight: 50
+  - name: Blog
+    identifier: 4680fc2f
     url: blog/
+    weight: 60
+  - name: Privacy
+    identifier: privacy
+    url: /privacy/
+    weight: 70
 
 # Footer links (4-column layout)
 #   Top-level items become column headings, children become links.

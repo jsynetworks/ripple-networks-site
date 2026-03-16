@@ -1,0 +1,23 @@
+/* 1. Import Montserrat Bold from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* 2. Style the Brand/Company Name in the Navbar */
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  
+  /* Color Fixes */
+  color: #445f7b !important;
+  opacity: 1 !important;            /* This stops it from looking washed out */
+  filter: none !important;          /* Removes any ghosting effects */
+
+  /* Size Fixes */
+  font-size: 2.6rem !important;     /* Increased from 1.4rem. Go higher if needed! */
+  line-height: 1 !important;        /* Keeps it centered vertically */
+}
+
+/* 3. Optional: Make sure the logo and text align vertically */
+.navbar-brand img {
+  vertical-align: middle;
+  margin-right: 10px;
+}

@@ -10,7 +10,7 @@ design:
 sections:
   - block: hero
     content:
-      title: Build Your Landing Pages with Hugo Blox
+      title: Technology Made Simple
       text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
       primary_action:
         text: Get Started
@@ -34,12 +34,12 @@ sections:
         color: "navy"
         image:
           # Add your image background to `assets/media/`.
-          filename: bg-triangles.svg
+          filename: backgroundimage.webp
           filters:
             brightness: 0.5
           size: cover
           position: center
-          parallax: false
+          parallax: true
   - block: stats
     content:
       items:
