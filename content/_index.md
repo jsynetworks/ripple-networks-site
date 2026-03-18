@@ -10,24 +10,25 @@ design:
 sections:
   - block: hero
     content:
-      title: Technology Made Simple
-      text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
-      primary_action:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-        icon: rocket-launch
-      secondary_action:
-        text: Read the docs
-        url: https://docs.hugoblox.com
-      announcement:
-        text: "Announcing the release of version 1."
-        link:
-          text: "Read more"
+      # title: Technology Made Simple
+      # text: "🧱 EASY. FREE (OPEN SOURCE). NO-CODES  🧱"
+      # primary_action:
+      #   text: Get Started
+      #   url: https://hugoblox.com/templates/
+      #   icon: rocket-launch
+      # secondary_action:
+      #   text: Read the docs
+      #   url: https://docs.hugoblox.com
+      # announcement:
+      #  text: "Announcing the release of version 1."
+      #  link:
+      #    text: "Read more"
           url: "/blog/"
     design:
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
+        css_class: "dark hero-with-logo"   # <-- Add this line
       # For full-screen, add `min-h-screen` below
       css_class: "dark"
       background:
