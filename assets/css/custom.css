@@ -1,9 +1,8 @@
-/* -----------------------------------------------------------
-   1. FONTS & NAVBAR
-   ----------------------------------------------------------- */
+/* 1. Import Montserrat Bold from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* (Add your .navbar-brand CSS here if needed) */
+
+
 
 /* -----------------------------------------------------------
    2. THE JERSEY MAP "FLOATING OVERLAY"
@@ -19,70 +18,48 @@ body.page-wrapper {
 
 #page-bg {
   position: absolute !important;
-  /* Fixed: Added 'px' to 80. Without units, browsers often ignore the instruction */
-  top: 80px !important; 
+  /* Centering Logic */
+  top: 0 !important;
   left: 50% !important;
+  transform: translateX(-50%); /* Keeps it centered before animation starts */
   
   /* Sizing Logic */
   width: 90vw !important;
   max-width: 600px !important;
-  /* Reduced height slightly to prevent overflow on smaller tablets */
-  height: 500px !important; 
+  height: 650px !important; 
   
   background-image: url('http://localhost:1313/ripple-networks-site/media/ripple-jsy-map-logo.svg') !important;
   background-repeat: no-repeat !important;
-  /* Changed to 'top center' to ensure it stays near the top on all devices */
-  background-position: center top !important;
+  background-position: center !important;
   background-size: contain !important;
-  
   z-index: 0 !important;
   pointer-events: none !important;
-  
-  /* Hardware Acceleration: Forces iPad to render smoothly */
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-backface-visibility: hidden;
   
   /* Animation */
   animation: jerseyHeroFade 3s ease-out forwards !important;
 }
 
-/* -----------------------------------------------------------
-   3. ANIMATION
-   ----------------------------------------------------------- */
-
+/* Initial Entrance Animation */
 @keyframes jerseyHeroFade {
   0% { 
     opacity: 0; 
-    /* Maintain the -50% X-axis centering and scale down from 1.5 */
+    /* Maintain the -50% X-axis centering during the scale effect */
     transform: translateX(-50%) scale(1.5);
-    -webkit-transform: translateX(-50%) scale(1.5);
   }
   100% { 
     opacity: 1; 
     transform: translateX(-50%) scale(1);
-    -webkit-transform: translateX(-50%) scale(1);
   }
 }
 
-/* -----------------------------------------------------------
-   4. RESPONSIVE ADJUSTMENTS (Mobile & iPad)
-   ----------------------------------------------------------- */
-
-/* Targeting Tablets/iPads */
-@media (max-width: 1024px) {
-  #page-bg {
-    top: 60px !important;
-    height: 450px !important;
-    max-width: 500px !important;
-  }
-}
-
-/* Targeting Phones */
+/* Responsive Adjustments: 
+   This ensures that on screens smaller than 768px (tablets/phones), 
+   the logo stays in a sensible spot.
+*/
 @media (max-width: 768px) {
   #page-bg {
-    top: 40px !important; 
-    width: 95vw !important;
-    height: 350px !important;
+    top: 20px !important; /* Adjust this to move it down if it hits the navbar */
+    width: 95vw !important; /* Slightly wider on small screens */
+    height: 350px !important; /* Shorter height for mobile viewport */
   }
 }
