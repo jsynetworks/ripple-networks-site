@@ -3,7 +3,7 @@ hugoblox:
   identity:
     type: local_business
     tagline: Connecting Networks
-    logo: "logo.png"
+    logo: "logo.svg"
     description: ""
   theme:
     mode: light
