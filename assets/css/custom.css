@@ -1,6 +1,9 @@
 /* 1. Import Montserrat Bold from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+
+
+
 /* -----------------------------------------------------------
    2. THE JERSEY MAP "FLOATING OVERLAY"
    ----------------------------------------------------------- */
@@ -18,6 +21,7 @@ body.page-wrapper {
   /* Centering Logic */
   top: 0 !important;
   left: 50% !important;
+  transform: translateX(-50%); /* Keeps it centered before animation starts */
   
   /* Sizing Logic */
   width: 90vw !important;
@@ -28,11 +32,6 @@ body.page-wrapper {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: contain !important;
-  
-  /* IPAD FIX: Prevents the background from zooming to the size of the whole page */
-  background-attachment: scroll !important; 
-  -webkit-transform: translateX(-50%) translateZ(0) !important; 
-  
   z-index: 0 !important;
   pointer-events: none !important;
   
@@ -44,32 +43,23 @@ body.page-wrapper {
 @keyframes jerseyHeroFade {
   0% { 
     opacity: 0; 
-    /* Maintain the -50% X-axis centering and translateZ(0) for iPad smoothness */
-    transform: translateX(-50%) scale(1.5) translateZ(0);
-    -webkit-transform: translateX(-50%) scale(1.5) translateZ(0);
+    /* Maintain the -50% X-axis centering during the scale effect */
+    transform: translateX(-50%) scale(1.5);
   }
   100% { 
     opacity: 1; 
-    transform: translateX(-50%) scale(1) translateZ(0);
-    -webkit-transform: translateX(-50%) scale(1) translateZ(0);
+    transform: translateX(-50%) scale(1);
   }
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments: 
+   This ensures that on screens smaller than 768px (tablets/phones), 
+   the logo stays in a sensible spot.
+*/
 @media (max-width: 768px) {
   #page-bg {
-    top: 20px !important; 
-    width: 95vw !important; 
-    height: 350px !important; 
-  }
-}
-
-/* ADDITIONAL TABLET FIX: 
-   Standard iPads are 1024px. If it's zoomed on iPad but not phone, 
-   we need this specific height cap for tablets. 
-*/
-@media (min-width: 769px) and (max-width: 1024px) {
-  #page-bg {
-    height: 450px !important; /* Prevents the container from being taller than the iPad screen */
+    top: 20px !important; /* Adjust this to move it down if it hits the navbar */
+    width: 95vw !important; /* Slightly wider on small screens */
+    height: 350px !important; /* Shorter height for mobile viewport */
   }
 }
